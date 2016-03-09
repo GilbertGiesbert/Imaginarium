@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2Nm-be-dnr">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9t-cT-MC6">
+                                <rect key="frame" x="178" y="315" width="46" height="30"/>
+                                <state key="normal" title="Flower">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JgN-Pj-sih" kind="show" identifier="photo_1" id="Z6C-my-nHG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbE-Pb-MJl">
+                                <rect key="frame" x="178" y="353" width="58" height="30"/>
+                                <state key="normal" title="Peppers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JgN-Pj-sih" kind="show" identifier="photo_2" id="P7d-qV-e8j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdX-nZ-9TY">
+                                <rect key="frame" x="178" y="391" width="55" height="30"/>
+                                <state key="normal" title="Jellyfish">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JgN-Pj-sih" kind="show" identifier="photo_3" id="ERn-SB-k3H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CbE-Pb-MJl" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="7gf-mF-Xcu"/>
+                            <constraint firstItem="cdX-nZ-9TY" firstAttribute="top" secondItem="CbE-Pb-MJl" secondAttribute="bottom" constant="8" symbolic="YES" id="B1f-Os-vzw"/>
+                            <constraint firstItem="CbE-Pb-MJl" firstAttribute="top" secondItem="d9t-cT-MC6" secondAttribute="bottom" constant="8" symbolic="YES" id="Upb-2b-zTu"/>
+                            <constraint firstItem="CbE-Pb-MJl" firstAttribute="leading" secondItem="d9t-cT-MC6" secondAttribute="leading" id="aYJ-vo-dNF"/>
+                            <constraint firstItem="CbE-Pb-MJl" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="om7-tL-JOm"/>
+                            <constraint firstItem="cdX-nZ-9TY" firstAttribute="leading" secondItem="CbE-Pb-MJl" secondAttribute="leading" id="xjH-Ik-kNe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PuR-nN-6OI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.5" y="140.25"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="R6W-jh-bOa">
+            <objects>
+                <viewController id="JgN-Pj-sih" customClass="ImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nQw-Q4-Ccd"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Dt-5H-wBz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="akt-ht-J8T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgW-KZ-7PE">
+                                <rect key="frame" x="16" y="72" width="382" height="644"/>
+                            </scrollView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="st8-6C-T1a">
+                                <rect key="frame" x="197" y="358" width="37" height="37"/>
+                                <color key="color" red="0.71818554400000001" green="0.89197987320000005" blue="0.99940502639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CgW-KZ-7PE" firstAttribute="trailing" secondItem="akt-ht-J8T" secondAttribute="trailingMargin" id="NIW-ZT-GAR"/>
+                            <constraint firstItem="CgW-KZ-7PE" firstAttribute="leading" secondItem="akt-ht-J8T" secondAttribute="leadingMargin" id="asB-n8-ec1"/>
+                            <constraint firstAttribute="bottom" secondItem="CgW-KZ-7PE" secondAttribute="bottom" constant="20" symbolic="YES" id="fus-Xs-aU4"/>
+                            <constraint firstItem="CgW-KZ-7PE" firstAttribute="top" secondItem="nQw-Q4-Ccd" secondAttribute="bottom" constant="8" symbolic="YES" id="nze-Rv-HQU"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="scrollView" destination="CgW-KZ-7PE" id="0g6-N4-w5r"/>
+                        <outlet property="spinner" destination="st8-6C-T1a" id="FDN-dD-xy5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Y2-VW-Itp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="140"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oTo-Zd-GHd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Nm-be-dnr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="haT-Sg-grW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="u6C-0V-Mos"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wz4-gw-SXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="140.25"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ERn-SB-k3H"/>
+    </inferredMetricsTieBreakers>
+</document>
