@@ -74,7 +74,6 @@
 
 - (UIImage *)image{
     
-    [self.spinner stopAnimating];
     return self.imageView.image;
 }
 
@@ -84,6 +83,7 @@
     [self.imageView sizeToFit];
     self.scrollView.contentSize = self.image ? self.image.size : CGSizeZero;
     
+    [self.spinner stopAnimating];
 }
 
 
